@@ -1,0 +1,78 @@
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center; /* 左右中央 */
+  align-items: center;     /* 上下中央 */
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+}
+
+img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* 画面の横幅が 600px 以下のとき（スマホ想定） */
+@media (max-width: 600px) {
+  body {
+    padding: 20px; /* 全体に余白を作る */
+  }
+
+  .card {
+    width: 90%;      /* 幅を固定（300px）から画面の90%に変更 */
+    padding: 15px;
+    background-color: #fffbe6; /* スマホだと色がわかるように変えてみる */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* 文字を少し小さくする */
+  }
+}
+.container {
+  display: flex;         /* 横に並べる魔法 */
+  gap: 20px;            /* カードの間の隙間 */
+  flex-wrap: wrap;      /* 画面が狭くなったら折り返す */
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  flex: 1;              /* 幅を均等に広げる */
+  min-width: 250px;     /* これより狭くなったら次の行へ */
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* CSSで横並びにする */
+nav ul {
+  display: flex;
+  list-style: none; /* 点を消す */
+  justify-content: flex-end; /* 右寄せ */
+  gap: 20px;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none; /* 下線を消す */
+  color: #333;
+  font-weight: bold;
+}
